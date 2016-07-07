@@ -4,10 +4,10 @@ import { AuthService } from './auth.service';
 
 @Component({
   template: `
-    <h2>LOGIN</h2>
+    <h2>Sign in</h2>
     <p>{{message}}</p>
     <p>
-      <button (click)="login()"  *ngIf="!authService.isLoggedIn">Login</button>
+      <button (click)="signin()"  *ngIf="!authService.isLoggedIn">Login</button>
       <button (click)="logout()" *ngIf="authService.isLoggedIn">Logout</button>
     </p>`
 })
@@ -22,10 +22,10 @@ export class LoginComponent {
     this.message = 'Logged ' + (this.authService.isLoggedIn ? 'in' : 'out');
   }
 
-  login() {
+  signin() {
     this.message = 'Trying to log in ...';
 
-    this.authService.login().subscribe(() => {
+    this.authService.signin().subscribe(() => {
       this.setMessage();
       if (this.authService.isLoggedIn) {
         // Todo: capture where the user was going and nav there.

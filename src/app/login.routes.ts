@@ -3,7 +3,7 @@ import { AuthService }        from './auth.service';
 import { LoginComponent }     from './login.component';
 
 export const LoginRoutes = [
-  { path: 'login', component: LoginComponent }
+  { path: 'signin', component: LoginComponent }
 ];
 
 export const AUTH_PROVIDERS = [AuthGuard, AuthService];
