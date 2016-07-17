@@ -7,10 +7,15 @@
  **********************************************************************************************/
 /** Map relative paths to URLs. */
 const map: any = {
+  '@ng-bootstrap/ng-bootstrap': 'vendor/@ng-bootstrap/ng-bootstrap'
 };
 
 /** User packages configuration. */
 const packages: any = {
+  '@ng-bootstrap/ng-bootstrap': {
+    defaultExtension: 'js',
+    main: 'index.js'
+  }
 };
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
